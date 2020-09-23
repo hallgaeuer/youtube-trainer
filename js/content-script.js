@@ -95,12 +95,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// Attempt to create the YouTubeTrainer on page load
+// This will only be the initial page load. YouTube is a SPA, so subsequent page loads will not really "reload" the page but just trigger the "yt-navigate-finish" event
+// youTubeTrainer.create() may silently fail if there is no video on the page (e.g. on the home page)
 _modules_youTubeTrainer__WEBPACK_IMPORTED_MODULE_0__["default"].create();
 
 window.addEventListener("yt-navigate-finish", function() {
     _modules_logger__WEBPACK_IMPORTED_MODULE_1__["default"].log('Event yt-navigate-finish fired');
 
-    _modules_youTubeTrainer__WEBPACK_IMPORTED_MODULE_0__["default"].onYouTubePageChange();
+    // Attempt to create YouTubeTrainer if it couldn't be created yet (see comment above)
+    if (!_modules_youTubeTrainer__WEBPACK_IMPORTED_MODULE_0__["default"].created) {
+        _modules_youTubeTrainer__WEBPACK_IMPORTED_MODULE_0__["default"].create();
+    }
+    else {
+        _modules_youTubeTrainer__WEBPACK_IMPORTED_MODULE_0__["default"].onYouTubePageChange();
+    }
 });
 
 /***/ }),
@@ -123,7 +132,7 @@ class YouTubeTrainer {
         this.created = false;
 
         this.elements = {
-            video: document.querySelector('video.html5-main-video'),
+            video: null,
     
             controlPanel: null,
             controlPanelForm: null,
@@ -151,6 +160,17 @@ class YouTubeTrainer {
     }
     
     create() {
+        let video = document.querySelector('video.html5-main-video');
+
+        if (video) {
+            this.elements.video = video;
+        }
+        else {
+            _logger__WEBPACK_IMPORTED_MODULE_1__["default"].log('No video element found, aborting create()');
+
+            return;
+        }
+
         this.created = true;
 
         this.buildControls();

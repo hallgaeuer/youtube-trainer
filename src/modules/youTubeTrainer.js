@@ -8,7 +8,7 @@ class YouTubeTrainer {
         this.created = false;
 
         this.elements = {
-            video: document.querySelector('video.html5-main-video'),
+            video: null,
     
             controlPanel: null,
             controlPanelForm: null,
@@ -36,6 +36,17 @@ class YouTubeTrainer {
     }
     
     create() {
+        let video = document.querySelector('video.html5-main-video');
+
+        if (video) {
+            this.elements.video = video;
+        }
+        else {
+            logger.log('No video element found, aborting create()');
+
+            return;
+        }
+
         this.created = true;
 
         this.buildControls();
