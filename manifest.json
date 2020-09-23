@@ -1,0 +1,18 @@
+{
+  "name": "YouTube Trainer",
+  "version": "1.0",
+  "description": "",
+  "manifest_version": 2,
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["css/youtube-trainer.css"],
+      "js": ["js/content-script.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "html/controls.html"
+  ]
+}

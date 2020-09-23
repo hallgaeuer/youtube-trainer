@@ -1,0 +1,62 @@
+.ytt-form-group {
+	margin: 5px 0 0;
+}
+
+.ytt-form-group > label {
+	margin: 0 10px 0 0;
+	display: inline-block;
+	width: 80px;
+}
+
+.ytt-form-group > input {
+}
+
+
+.ytt-form-group > input[type="text"] {
+	color: var(--yt-searchbox-text-color);
+	background: var(--yt-searchbox-background);
+	width: 50px;
+	padding: 3px 5px;
+	border: none;
+}
+
+.ytt-form-group > input[type="checkbox"] {
+	margin: 0;
+}
+
+.ytt-control-panel {
+	margin: 12px 0 0;
+	padding: 12px;
+	background: var(--yt-spec-brand-background-primary);
+	color: var(--yt-spec-text-primary);
+	font-size: 1.4rem;
+}
+
+.ytt-control-panel a {
+	color: var(--yt-spec-text-primary);
+}
+
+.ytt-control-panel__form {
+	display: flex;
+}
+
+.ytt-control-panel__section {
+	flex: 1;
+}
+
+.ytt-control-panel__section-header {
+	margin: 0 0 12px;
+}
+
+.ytt-loop-controls__start-input,
+.ytt-loop-controls__end-input {
+	margin-right: 5px;
+}
+
+.ytt-loop-bar {
+	position: absolute;
+	background-color: rgba(55, 100, 200, 0.75);
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+}
