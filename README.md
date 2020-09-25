@@ -1,9 +1,9 @@
-# YouTubeTrainer
+# YouTubePracticeTool
 
 A chrome extension to help musicians practice on YouTube.  
 Still a work in progress.
 
-## Planned features:
+## Current features:
 
 * Loop capabilities
 * Fine playback speed controls

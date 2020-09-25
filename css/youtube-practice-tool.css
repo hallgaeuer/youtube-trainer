@@ -46,6 +46,7 @@
 
 .ytt-control-panel__section-header {
 	margin: 0 0 12px;
+	font-weight: bold;
 }
 
 .ytt-loop-controls__start-input,

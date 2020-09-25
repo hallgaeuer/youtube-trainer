@@ -3,7 +3,7 @@ import settings from "./settings"
 import template from "./template"
 import * as Tone from 'tone'
 
-class YouTubeTrainer {
+class YouTubePracticeTool {
     constructor() {
         this.created = false;
 
@@ -325,4 +325,4 @@ class YouTubeTrainer {
     }
 }
 
-export default new YouTubeTrainer();
+export default new YouTubePracticeTool();

@@ -1,14 +1,14 @@
 {
-  "name": "YouTube Trainer",
+  "name": "YouTube Practice Tool",
   "version": "1.0",
-  "description": "",
+  "description": "Adds controls below YouTube videos to help musicians practice / learn songs (loop, playback rate, pitch)",
   "manifest_version": 2,
   "default_locale": "en",
 
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
-      "css": ["css/youtube-trainer.css"],
+      "css": ["css/youtube-practice-tool.css"],
       "js": ["js/content-script.js"]
     }
   ],
