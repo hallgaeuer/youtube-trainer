@@ -1,6 +1,6 @@
-import localization from "./localization"
 import logger from "./logger"
 import settings from "./settings"
+import template from "./template"
 import * as Tone from 'tone'
 
 class YouTubeTrainer {
@@ -287,6 +287,8 @@ class YouTubeTrainer {
                 return response.text();
             })
             .then(function(html) {
+                html = template(html);
+
                 const div = document.createElement('div');
                 div.innerHTML = html;
 

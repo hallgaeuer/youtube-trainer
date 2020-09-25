@@ -1,0 +1,32 @@
+{
+  "loop": {
+    "message": "Loop"
+  },
+  "loopActive": {
+    "message": "Loop active"
+  },
+  "loopStart": {
+    "message": "Loop start"
+  },
+  "loopEnd": {
+    "message": "Loop end"
+  },
+  "loopSetStart": {
+    "message": "Set to now"
+  },
+  "loopSetEnd": {
+    "message": "Set to now"
+  },
+  "playbackRate": {
+    "message": "Playback rate"
+  },
+  "playbackRateValue": {
+    "message": "Value"
+  },
+  "pitch": {
+    "message": "Pitch"
+  },
+  "pitchShift": {
+    "message": "Shift"
+  }
+}

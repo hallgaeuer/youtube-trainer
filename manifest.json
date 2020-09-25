@@ -3,6 +3,7 @@
   "version": "1.0",
   "description": "",
   "manifest_version": 2,
+  "default_locale": "en",
 
   "content_scripts": [
     {
